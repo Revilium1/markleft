@@ -27,9 +27,13 @@ Header
 ------
 
 - Starts with:
+```
   |====================|
+```
 - Ends with:
+```
   |--------------------|
+```
 
 - Required lines:
   - TITLE — the title of the file
