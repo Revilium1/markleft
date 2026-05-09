@@ -1,8 +1,8 @@
-MARKLEFT v1.1.0 — The Wow I'm Getting Somewhere Update
+MARKLEFT v1.2.0 — CLI update
 =======================================================
 
 MARKLEFT is a plain-text, fixed-width file format designed for
-structured notes, demos, and lightweight metadata. Version 1.1.0
+structured notes, demos, and lightweight metadata. Version 1.2.0
 introduces headers with required metadata, body continuation lines,
 and a structured footer for versioning.
 
@@ -75,19 +75,19 @@ Footer
 - Begins with:
   [footer]
 - Required variables:
-  - [mlfver=1.1.0] — markleft version
+  - [mlfver=1.2.0] — markleft version
   - [eof] — end of file marker
 - A blank line must appear before [eof]
 
 Example:
 ```
 [footer]
-[mlfver=1.1.0]
+[mlfver=1.2.0]
 [eof]
 ```
 Output:
 
-mlfver=1.1.0
+mlfver=1.2.0
 
 Rules Summary
 -------------
@@ -97,7 +97,7 @@ Rules Summary
 2. Header must include TITLE and AUTHOR.
 3. Body comments start with # and are ignored in read output.
 4. Continuation lines end with > and are concatenated.
-5. Footer starts with [footer] and must include [mlfver=1.1.0]
+5. Footer starts with [footer] and must include [mlfver=1.2.0]
    and [eof].
 6. ASCII only.
 7. Blank line required before [eof].
@@ -140,7 +140,7 @@ Example Full File
 |FINAL BODY LINE     |
 
 [footer]
-[mlfver=1.1.0]
+[mlfver=1.2.0]
 [eof]
 ```
 Output
@@ -159,7 +159,7 @@ ANOTHER BODY LINE
 FINAL BODY LINE
 
 ===== FOOTER =====
-mlfver=1.1.0
+mlfver=1.2.0
 ```
 Notes
 -----
@@ -169,5 +169,5 @@ Notes
 - Comments and continuation lines allow for flexible formatting in the body.
 - Fully ASCII-compatible and portable across platforms.
 
-Version: 1.1.0 — The Wow I'm Getting Somewhere Update
+Version: 1.2.0 — The Wow I'm Getting Somewhere Update
 Author: human39
