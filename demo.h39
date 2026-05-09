@@ -1,0 +1,19 @@
+|====================|
+|MARKLEFT FULL DEMO  |
+|AUTHOR=human39      |
+|--------------------|
+|HELLO WORLD         |
+|THIS IS MARKLEFT    |
+|FIXED WIDTH TEXT    |
+|#COMMENT LINE       |
+|CONTINUATION LINE1 >|
+|CONTINUATION LINE2 >|
+|CONTINUATION LINE 3 |
+|ANOTHER BODY LINE   |
+|#SECOND COMMENT     |
+|FINAL BODY LINE     |
+
+[footer]
+[mlfver=1.1.0]
+
+[eof]
