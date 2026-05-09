@@ -105,19 +105,21 @@ Rules Summary
 CLI Usage
 ---------
 
-MARKLEFT v1.1.0 comes with a simple Python CLI with three options:
+MARKLEFT v1.2.0 comes with command-line flags and an interactive menu:
 
-1. Validate — check file correctness
-2. Read — print file contents with proper formatting and
-   line continuations
-3. Write — create a .h39 file interactively
+Flags:
+- `-v` or `-p` — read/print a .h39 file with formatted output
+  Usage: `python markleft.py -p <filename>`
+- `-w` — write/create a new .h39 file interactively
+  Usage: `python markleft.py -w` (prompts for filename) or 
+         `python markleft.py -w <filename>`
 
-Example menu:
+Interactive Menu (no arguments):
 
-==== MARKLEFT v1.1.0 TOOL ====
-1. Validate
+==== MARKLEFT v1.2.0 TOOL ====
+1. Validate / Parse
 2. Read
-3. Write
+3. Write / Edit
 4. Exit
 
 Example Full File
