@@ -87,6 +87,7 @@ Example:
 ```
 [footer]
 [mlfver=1.2.0]
+
 [eof]
 ```
 Output:
@@ -145,6 +146,7 @@ Example Full File
 
 [footer]
 [mlfver=1.2.0]
+
 [eof]
 ```
 Output
