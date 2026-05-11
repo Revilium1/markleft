@@ -1,4 +1,4 @@
-MARKLEFT v1.2.0 — CLI update
+MARKLEFT v1.2.1 — CLI update
 =======================================================
 
 MARKLEFT is a plain-text, fixed-width file format designed for
@@ -175,5 +175,5 @@ Notes
 - Comments and continuation lines allow for flexible formatting in the body.
 - Fully ASCII-compatible and portable across platforms.
 
-Version: 1.2.0 — The Wow I'm Getting Somewhere Update
-Author: human39
+Version: 1.2.1 — The CLI Update
+Author: human39/Revilium1

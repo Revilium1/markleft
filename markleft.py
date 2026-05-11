@@ -1,4 +1,4 @@
-# MARKLEFT v1.2.0 CLI Demo
+# MARKLEFT v1.2.1 CLI Demo
 # Fully compatible with v1.1.0 files
 # Adds QoL: auto continuation, padding, and CLI++ with MSBASIC-style editing
 
@@ -73,10 +73,21 @@ def validate_markleft(filename):
     if header_end < 3:
         return False, "Header must include TITLE and AUTHOR"
 
+    # Validate TITLE and AUTHOR lines first
+    if not validate_line(lines[1]):
+        return False, "Invalid TITLE line"
+
+    if not validate_line(lines[2]):
+        return False, "Invalid AUTHOR line"
+
     header_title = lines[1][1:-1].rstrip()
     header_author = lines[2][1:-1].rstrip()
-    if not header_title or not header_author.startswith("AUTHOR="):
-        return False, "Header must include TITLE and AUTHOR lines"
+
+    if not header_title:
+        return False, "Missing TITLE"
+
+    if not header_author.startswith("AUTHOR="):
+        return False, "Missing AUTHOR line"
 
     in_footer = False
     for line in lines[1:-2]:
