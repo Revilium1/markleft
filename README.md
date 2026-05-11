@@ -1,10 +1,11 @@
-MARKLEFT v1.2.1 — CLI update
+MARKLEFT v1.3.0 — Terminal Inspired Editor
 =======================================================
 
 MARKLEFT is a plain-text, fixed-width file format designed for
-structured notes, demos, and lightweight metadata. Version 1.2.0
-introduces headers with required metadata, body continuation lines,
-and a structured footer for versioning.
+structured notes, demos, and lightweight metadata. Version 1.3.0
+introduces a command-line text editor for creating and editing
+.h39 files interactively, building on the structured format from
+previous versions.
 
 File Extension
 --------------
@@ -79,20 +80,43 @@ Footer
 - Begins with:
   [footer]
 - Required variables:
-  - [mlfver=1.2.0] — markleft version
+  - [mlfver=1.3.0] — markleft version
   - [eof] — end of file marker
 - A blank line must appear before [eof]
 
 Example:
 ```
 [footer]
-[mlfver=1.2.0]
+[mlfver=1.3.0]
 
 [eof]
 ```
 Output:
 
-mlfver=1.2.0
+mlfver=1.3.0
+
+CLI Editor
+----------
+
+Version 1.3.0 introduces a command-line text editor for creating and
+editing .h39 files interactively. Use the -w flag to launch the editor.
+
+Commands:
+- help: Show available commands
+- list/ls: Display current body content
+- +/add [text] [pos]: Add line to bottom or insert at position
+- -/del [pos]: Delete line at position
+- edit [pos] [text]: Replace line at position
+- title [title]: Set file title
+- author [author]: Set author
+- save/s: Save file
+- sq: Save and quit
+- quit/q: Quit without saving
+
+Example usage:
+```
+python markleft.py -w myfile.h39
+```
 
 Rules Summary
 -------------
@@ -110,7 +134,7 @@ Rules Summary
 CLI Usage
 ---------
 
-MARKLEFT v1.2.0 comes with command-line flags and an interactive menu:
+MARKLEFT v1.3.0 comes with command-line flags and an interactive menu:
 
 Flags:
 - `-v` or `-p` — read/print a .h39 file with formatted output
@@ -121,7 +145,7 @@ Flags:
 
 Interactive Menu (no arguments):
 
-==== MARKLEFT v1.2.0 TOOL ====
+==== MARKLEFT v1.3.0 TOOL ====
 1. Validate / Parse
 2. Read
 3. Write / Edit
@@ -145,7 +169,7 @@ Example Full File
 |FINAL BODY LINE     |
 
 [footer]
-[mlfver=1.2.0]
+[mlfver=1.3.0]
 
 [eof]
 ```
@@ -165,7 +189,7 @@ ANOTHER BODY LINE
 FINAL BODY LINE
 
 ===== FOOTER =====
-mlfver=1.2.0
+mlfver=1.3.0
 ```
 Notes
 -----
@@ -175,5 +199,5 @@ Notes
 - Comments and continuation lines allow for flexible formatting in the body.
 - Fully ASCII-compatible and portable across platforms.
 
-Version: 1.2.1 — The CLI Update
+Version: 1.3.0 — The Editor Update
 Author: human39/Revilium1
