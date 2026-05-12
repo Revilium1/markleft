@@ -603,7 +603,7 @@ def interactive_menu():
 
     while True:
 
-        print("\n==== MARKLEFT v1.2 TOOL ====")
+        print("\n==== MARKLEFT v1.3.1 TOOL ====")
         print("1. Validate / Parse")
         print("2. Read")
         print("3. Write / Edit")
